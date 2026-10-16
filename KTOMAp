@@ -1,5 +1,5 @@
 -- ==========================================
--- 🛡️ Loader หลัก (ซ่อนลิงก์ด้วย Base64)
+-- 🛡️ Loader
 -- ==========================================
 
 local function b64Decode(data)
@@ -18,10 +18,7 @@ local function b64Decode(data)
     end))
 end
 
--- 📌 วางรหัส Base64 ที่แปลงแล้วตรงนี้
 local encodedLink = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Vyb29tYWppLWdpZi9LVE9NYXAvcmVmcy9oZWFkcy9tYWluL01BcA==" 
-
--- ถอดรหัสแล้วรันสคริปต์อัตโนมัติ
 local realLink = b64Decode(encodedLink)
 task.spawn(function()
     pcall(function()
